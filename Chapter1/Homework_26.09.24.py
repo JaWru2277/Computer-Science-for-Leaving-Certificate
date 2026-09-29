@@ -1,5 +1,5 @@
 #Iteration for loops
-"""
+
 #T1
 for i in range(1, 11):
     print(i)
@@ -26,7 +26,7 @@ for i in sentence:
     if (i == "a" or i == "e" or i == "i" or i == "o" or i == "u"):
         vowels += 1
 print("Vowels: ", vowels)
-"""
+
 
 #T4
 sentence = input("Enter a sentence: ")
@@ -34,3 +34,17 @@ reverse = ""
 for i in sentence:
     reverse = i + reverse
 print(reverse)
+
+#T5
+sentence = input("Enter a sentence: ")
+character = input("Enter a single character: ")
+counter = 0
+
+if len(character) == 1:
+    for i in sentence:
+        if i == character:
+            counter += 1
+    print(counter)
+else:
+    print("Enter just one character")
+            
