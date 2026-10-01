@@ -1,3 +1,75 @@
+#Question 16 (a)
+
+def get_grade(result):
+    grade = "Unsuccessful"
+    
+    if result >= 80:
+        grade = "Distinction"
+    elif result >= 65:
+        grade = "Upper Merit"
+    elif result >= 50:
+        grade = "Lower Merit"
+    elif result >= 40:
+        grade = "Pass"
+    else:
+        grade = "Unsuccesful"
+        
+    return grade
+
+# Calculate and disokay the mean of a list of resuts
+results = [39, 32, 62, 88, 51, 62, 64, 81, 77] # Initialise the list
+N = len(results) # Initialise N to the number of results
+total = 0 # Initialise the running total to 0
+
+# Loop N times
+for i in range(N):
+    total = total+results[i] # Running total
+    
+# Divide by the total number of results to give the mean
+arithmatic_mean = round(total/N, 2)
+
+# Display the answer
+print("The mean percentage mark is", arithmatic_mean)
+
+#(iv)
+grade = get_grade(arithmatic_mean)
+print("The grade for the average result is", grade)
+
+#(v)
+highest = max(results)
+lowest = min(results)
+print("The lowest score is", lowest)
+print("The highest score is", highest)
+
+#(vi)
+count1 = 0 #<40
+count2 = 0 #50-79
+
+for i in results:
+    if i < 40:
+        count1 += 1
+    elif i >=50 and i <=79:
+        count2 += 1
+print("The number of scores below 40 is", count1)
+print("The number of scores between 50 and 79 inclusive is", count2)
+
+#(vii)
+longest = []
+current = [results[0]]
+for i in range(1, N):
+    if results[i] > results [i-1]:
+        current.append(results[i])
+    else:
+        if len(current) > len(longest):
+            longest = current
+        current = [results[i]]
+        
+if len(current) > len(longest):
+    longest = current
+    
+print("Longest run of result increase is", longest)
+
+#----------------------------------------------------------------------
 
 #Question 16 (b)
 
