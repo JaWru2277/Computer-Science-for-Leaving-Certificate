@@ -73,7 +73,7 @@ print("Longest run of result increase is", longest)
 
 #Question 16 (b)
 
-x = int(input("Enter how many numbers you would want to calculate: "))
+x = int(input("Enter how many numbers you would like to calculate: "))
 #Lets the user control how many items there will be in the list
 
 numbers = [] #Empty list where all the numbers will be added to
