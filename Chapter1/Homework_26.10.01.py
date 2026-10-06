@@ -54,14 +54,15 @@ for i in rainfall:
 #Task 4
 
 sales = [
-    ["Danny", 12.5, 23.2, 5.2],
-    ["Sarah", 7.85, 2, 1],
-    ["Jacqueline", 15.2, 17.3, 43.6],
-    ["Ruaidhri", 23.19, 8.3, 17.5]
+    ["danny", 12.5, 23.2, 5.2],
+    ["sarah", 7.85, 2, 1],
+    ["jacqueline", 15.2, 17.3, 43.6],
+    ["ruaidhri", 23.19, 8.3, 17.5]
 ]
 
 
 name = input("Enter your name: ")
+name = name.lower()
 
 for row in sales:
     if row[0] == name:
