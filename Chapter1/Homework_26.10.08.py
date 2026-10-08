@@ -38,6 +38,7 @@ def sequenceChecker(user, random): #Checks if the numbers entered by the user ar
             break
         elif sequence == user: #if not, checks if the sequence appears at all
             winner += 1
+       
         counter1 += 1
         counter2 += 1
     
